@@ -556,6 +556,7 @@ a.adress-link {
 }
 .port-link{
   display: block;
+  
 }
 
 .port-title {
@@ -564,6 +565,27 @@ a.adress-link {
   letter-spacing: 0.06em;
   color: var(--main-title-color);
   margin-bottom: 4px;
+}
+.port-wrap{
+  position: relative;
+  overflow: hidden;
+}
+.port-top-text{
+  position: absolute;
+  top: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+  padding: 63px 24px;
+  transform: translateY(100%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: auto;
+}
+.port-link:hover .port-top-text{
+  transform: translateY(0%);
+
 }
 .port-text {
   font-size: 16px;
@@ -581,4 +603,39 @@ a.adress-link {
 .port-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.backdrop{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+
+}
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 528px;
+  min-height: 581px;
+  background: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+}
+.modal-close-btn{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-image: url(../images/close-black-18dp.svg);
+  background-position: center;
+  background-repeat: no-repeat;
 }
